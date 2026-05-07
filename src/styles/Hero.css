@@ -160,9 +160,11 @@
 
 .hero-title-gradient {
   background: linear-gradient(135deg, 
-    #C9A14A 0%,      /* Rich Gold */
-    #D4AF5F 50%,     /* Light Gold */
-    #C9A14A 100%     /* Rich Gold */
+    #FFD700 0%,      /* Bright Gold */
+    #FFA500 25%,     /* Orange Gold */
+    #C9A14A 50%,     /* Rich Gold */
+    #D4AF5F 75%,     /* Light Gold */
+    #FFD700 100%     /* Bright Gold */
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
