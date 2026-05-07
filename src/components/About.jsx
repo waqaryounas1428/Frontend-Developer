@@ -1,5 +1,4 @@
-import React from 'react';
-import { FaAward, FaUsers, FaGem, FaCheckCircle } from 'react-icons/fa';
+import { FaAward, FaUsers, FaGem } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
 import '../styles/About.css';
 
@@ -12,22 +11,6 @@ const About = () => {
     { icon: <FaGem />, number: '1000+', label: t.aboutProjectsLabel },
   ];
 
-  const highlights = language === 'urdu' ? [
-    'پریمیم اطالوی اور ترک ماربل',
-    'حسب ضرورت موزیک ڈیزائن',
-    'ماہر تنصیب کی خدمات',
-    'فیکٹری براہ راست قیمتیں',
-    'معیار کی ضمانت',
-    'وقت پر منصوبے کی فراہمی'
-  ] : [
-    'Premium Italian & Turkish Marble',
-    'Custom Mosaic Designs',
-    'Expert Installation Services',
-    'Factory Direct Pricing',
-    'Quality Assurance Guaranteed',
-    'On-Time Project Delivery'
-  ];
-
   return (
     <section id="about" className="about-section">
       <div className="about-container">
@@ -35,7 +18,6 @@ const About = () => {
           <h2 className="about-title">
             {t.aboutLabel} <span className="text-gradient">{t.footerCompanyName}</span>
           </h2>
-          <div className="about-divider"></div>
           <p className="about-description">
             {t.aboutDescription}
           </p>
@@ -59,16 +41,6 @@ const About = () => {
                 : 'Our team of skilled craftsmen combines traditional techniques with modern innovation to deliver exceptional results. From residential projects to commercial installations, we bring your vision to life with precision and passion.'
               }
             </p>
-
-            {/* Highlights List */}
-            <div className="about-highlights">
-              {highlights.map((highlight, index) => (
-                <div key={index} className="highlight-item">
-                  <FaCheckCircle className="highlight-icon" />
-                  <span>{highlight}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Image Gallery */}

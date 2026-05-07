@@ -57,7 +57,7 @@
 /* Image Indicators - Gold */
 .hero-indicators {
   position: absolute;
-  bottom: 120px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -317,7 +317,7 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   color: #C9A14A;
@@ -415,7 +415,7 @@
   }
   
   .hero-indicators {
-    bottom: 140px;
+    bottom: 35px;
   }
 }
 
@@ -438,11 +438,11 @@
   
   .scroll-indicator {
     font-size: 40px;
-    bottom: 90px;
+    bottom: 80px;
   }
   
   .hero-indicators {
-    bottom: 150px;
+    bottom: 40px;
   }
 }
 
@@ -470,11 +470,11 @@
   
   .scroll-indicator {
     font-size: 44px;
-    bottom: 100px;
+    bottom: 90px;
   }
   
   .hero-indicators {
-    bottom: 160px;
+    bottom: 45px;
   }
 }
 
@@ -497,10 +497,10 @@
   
   .scroll-indicator {
     font-size: 48px;
-    bottom: 110px;
+    bottom: 100px;
   }
   
   .hero-indicators {
-    bottom: 170px;
+    bottom: 50px;
   }
 }
