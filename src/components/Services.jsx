@@ -56,25 +56,23 @@ const Services = () => {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className={`service-card ${expandedCards[index] ? 'expanded' : ''} ${language === 'urdu' ? 'urdu-text' : ''}`}>
+            <div key={index} className={`service-card ${language === 'urdu' ? 'urdu-text' : ''}`}>
               <div className="service-icon">
                 {service.icon}
               </div>
               <h3 className="service-title">
                 {service.title}
               </h3>
-              <div className="service-content-wrapper">
-                <p className="service-description">
-                  {service.description}
-                </p>
-                <ul className="service-features">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <p className={`service-description ${expandedCards[index] ? 'expanded' : ''}`}>
+                {service.description}
+              </p>
+              <ul className={`service-features ${expandedCards[index] ? 'expanded' : ''}`}>
+                {service.features.map((feature, idx) => (
+                  <li key={idx} className="service-feature">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
               <button 
                 className="service-read-more"
                 onClick={() => toggleCard(index)}
