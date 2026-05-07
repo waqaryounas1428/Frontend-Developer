@@ -151,6 +151,11 @@
     0 8px 24px rgba(0, 0, 0, 0.4);
   line-height: 1.1;
   letter-spacing: 1px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  padding: 0 8px;
 }
 
 .hero-title-gradient {
@@ -193,6 +198,11 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   opacity: 0.95;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  padding: 0 8px;
 }
 
 .hero-description {
@@ -220,7 +230,7 @@
 }
 
 .hero-btn-primary {
-  padding: 11px 24px;
+  padding: 11px 20px;
   background: linear-gradient(135deg, #C9A14A 0%, #D4AF5F 50%, #E5C474 100%);
   color: #0F172A;
   font-weight: 600;
@@ -228,17 +238,23 @@
   text-decoration: none;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 16px rgba(201, 161, 74, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
   max-width: 180px;
+  min-width: 120px;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
   position: relative;
   overflow: hidden;
   will-change: transform, box-shadow;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 1.2;
 }
 
 .hero-btn-primary::before {
@@ -263,7 +279,7 @@
 }
 
 .hero-btn-secondary {
-  padding: 11px 24px;
+  padding: 11px 20px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -273,16 +289,22 @@
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
   max-width: 180px;
+  min-width: 120px;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   will-change: transform, box-shadow;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 1.2;
 }
 
 .hero-btn-secondary:hover {
@@ -349,9 +371,10 @@
   
   .hero-btn-primary,
   .hero-btn-secondary {
-    padding: 12px 28px;
-    font-size: 13px;
+    padding: 12px 24px;
+    font-size: 12px;
     max-width: 200px;
+    min-width: 140px;
   }
 }
 
@@ -381,9 +404,10 @@
   
   .hero-btn-primary,
   .hero-btn-secondary {
-    padding: 13px 32px;
-    font-size: 14px;
+    padding: 13px 28px;
+    font-size: 13px;
     max-width: 220px;
+    min-width: 160px;
   }
   
   .scroll-indicator {
@@ -438,9 +462,10 @@
   
   .hero-btn-primary,
   .hero-btn-secondary {
-    padding: 14px 36px;
-    font-size: 14px;
+    padding: 14px 32px;
+    font-size: 13px;
     max-width: 240px;
+    min-width: 180px;
   }
   
   .scroll-indicator {
@@ -465,6 +490,9 @@
   .hero-btn-primary,
   .hero-btn-secondary {
     max-width: 260px;
+    min-width: 200px;
+    padding: 14px 32px;
+    font-size: 13px;
   }
   
   .scroll-indicator {

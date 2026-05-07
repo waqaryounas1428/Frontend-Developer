@@ -323,6 +323,12 @@
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   transform: translateY(0);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-card:hover .project-category {
@@ -355,6 +361,11 @@
   line-height: 1.3;
   transition: all 0.3s ease;
   transform: translateY(0);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .project-card:hover .project-title {
