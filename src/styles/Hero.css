@@ -57,7 +57,7 @@
 /* Image Indicators - Gold */
 .hero-indicators {
   position: absolute;
-  bottom: 32px;
+  bottom: 120px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -295,7 +295,7 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: 16px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   color: #C9A14A;
@@ -303,8 +303,9 @@
   cursor: pointer;
   z-index: 10;
   filter: drop-shadow(0 2px 8px rgba(201, 161, 74, 0.6));
-  display: none;
+  display: block;
   transition: all 0.3s ease;
+  font-size: 32px;
 }
 
 .scroll-indicator:hover {
@@ -386,7 +387,11 @@
   }
   
   .scroll-indicator {
-    display: block;
+    font-size: 36px;
+  }
+  
+  .hero-indicators {
+    bottom: 140px;
   }
 }
 
@@ -405,6 +410,15 @@
   
   .hero-background-image {
     background-attachment: fixed;
+  }
+  
+  .scroll-indicator {
+    font-size: 40px;
+    bottom: 90px;
+  }
+  
+  .hero-indicators {
+    bottom: 150px;
   }
 }
 
@@ -428,6 +442,15 @@
     font-size: 14px;
     max-width: 240px;
   }
+  
+  .scroll-indicator {
+    font-size: 44px;
+    bottom: 100px;
+  }
+  
+  .hero-indicators {
+    bottom: 160px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -442,5 +465,14 @@
   .hero-btn-primary,
   .hero-btn-secondary {
     max-width: 260px;
+  }
+  
+  .scroll-indicator {
+    font-size: 48px;
+    bottom: 110px;
+  }
+  
+  .hero-indicators {
+    bottom: 170px;
   }
 }
