@@ -74,6 +74,7 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  align-items: start;
 }
 
 .service-card {
@@ -85,10 +86,12 @@
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
-  min-height: auto;
   word-wrap: break-word;
   overflow-wrap: break-word;
   will-change: transform, box-shadow;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .service-card::before {
@@ -253,10 +256,19 @@
   transition: color 0.3s ease;
   text-align: center;
   line-height: 1.3;
+  flex-shrink: 0;
 }
 
 .service-card:hover .service-title {
   color: var(--accent-main);
+}
+
+/* Expandable Content Container */
+.service-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .service-description {
@@ -265,26 +277,41 @@
   line-height: 1.4;
   font-size: 0.7rem;
   text-align: center;
-  max-height: 2.8em;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-.service-description.expanded {
-  max-height: 500px;
+/* Fixed height for collapsed state */
+.service-card:not(.expanded) .service-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 2.8em;
+}
+
+.service-card.expanded .service-description {
+  display: block;
+  max-height: none;
 }
 
 .service-features {
   list-style: none;
   padding: 0;
   margin: 0 0 0.5rem 0;
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-.service-features.expanded {
+.service-card:not(.expanded) .service-features {
+  max-height: 0;
+  opacity: 0;
+}
+
+.service-card.expanded .service-features {
   max-height: 300px;
+  opacity: 1;
 }
 
 .service-feature {
@@ -306,7 +333,7 @@
   flex-shrink: 0;
 }
 
-/* Read More Button */
+/* Read More Button - Always at bottom */
 .service-read-more {
   display: inline-block;
   padding: 0.35rem 0.875rem;
@@ -319,7 +346,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.3px;
-  margin-top: 0.35rem;
+  margin-top: auto;
+  align-self: center;
+  flex-shrink: 0;
 }
 
 .service-read-more:hover {
@@ -329,14 +358,17 @@
   box-shadow: var(--shadow-gold);
 }
 
-/* Desktop - Show all content */
+/* Desktop - Show all content, hide button */
 @media (min-width: 768px) {
-  .service-description {
-    max-height: none;
+  .service-card .service-description {
+    display: block !important;
+    max-height: none !important;
+    -webkit-line-clamp: unset !important;
   }
   
-  .service-features {
-    max-height: none;
+  .service-card .service-features {
+    max-height: none !important;
+    opacity: 1 !important;
   }
   
   .service-read-more {
@@ -392,7 +424,7 @@
   }
   
   .service-title {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     margin-bottom: 0.25rem;
   }
   
