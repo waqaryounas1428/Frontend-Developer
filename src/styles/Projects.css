@@ -78,12 +78,11 @@
   margin-right: auto;
 }
 
-/* Masonry Layout - Pinterest Style */
+/* Masonry Layout - Always 3 Columns */
 .projects-grid.masonry-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 20px;
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
   animation: masonryFadeIn 0.8s ease-out;
 }
 
@@ -96,20 +95,14 @@
   }
 }
 
-/* Masonry Items with Different Heights */
-.masonry-item-1 {
-  grid-row-end: span 18; /* Tall */
-}
-
-.masonry-item-2 {
-  grid-row-end: span 22; /* Extra Tall */
-}
-
+/* Remove Masonry Different Heights - All Same */
+.masonry-item-1,
+.masonry-item-2,
 .masonry-item-3 {
-  grid-row-end: span 16; /* Medium */
+  /* No special height - all cards same */
 }
 
-/* Fade In Animation for Masonry Items */
+/* Fade In Animation for All Items */
 .fade-in {
   animation: fadeInScale 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   opacity: 0;
@@ -126,10 +119,9 @@
   }
 }
 
-/* Masonry Image Wrapper */
+/* All Cards Same Height */
 .masonry-layout .project-image-wrapper {
-  height: 100%;
-  min-height: 250px;
+  height: 14rem;
 }
 
 .masonry-layout .project-image {
@@ -143,8 +135,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: rgba(201, 161, 74, 0.95);
   border-radius: 50%;
   display: flex;
@@ -162,36 +154,48 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* Mobile Responsive for Masonry */
-@media (max-width: 768px) {
+/* Mobile Responsive for All Grids */
+@media (max-width: 639px) {
+  .projects-title {
+    font-size: 1.75rem;
+  }
+  
+  .projects-grid,
   .projects-grid.masonry-layout {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
   }
   
-  .masonry-item-1 {
-    grid-row-end: span 16;
+  .project-card {
+    border-radius: 0.65rem;
   }
   
-  .masonry-item-2 {
-    grid-row-end: span 20;
+  .project-image-wrapper,
+  .masonry-layout .project-image-wrapper {
+    height: 10rem;
   }
   
-  .masonry-item-3 {
-    grid-row-end: span 14;
-  }
-}
-
-@media (max-width: 480px) {
-  .projects-grid.masonry-layout {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .project-content {
+    padding: 0.75rem;
   }
   
-  .masonry-item-1,
-  .masonry-item-2,
-  .masonry-item-3 {
-    grid-row-end: span 18;
+  .project-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .project-category {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.55rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .project-description {
+    font-size: 0.7rem;
+  }
+  
+  .project-zoom-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
