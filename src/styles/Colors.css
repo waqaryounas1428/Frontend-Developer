@@ -1,0 +1,104 @@
+/* Premium Luxury Color Palette - Marble & Stone Inspired */
+
+:root {
+  /* ===== PRIMARY COLORS - Deep Navy Blue ===== */
+  --primary-dark: #0A0F1A;      /* Very Dark Navy */
+  --primary-main: #0F172A;      /* Deep Navy Blue */
+  --primary-light: #1E293B;     /* Slate Navy */
+  
+  /* ===== ACCENT COLORS - Rich Gold ===== */
+  --accent-dark: #B8933D;       /* Dark Gold */
+  --accent-main: #C9A14A;       /* Rich Gold */
+  --accent-light: #D4AF5F;      /* Light Gold */
+  --accent-glow: #E5C474;       /* Gold Glow */
+  
+  /* ===== BACKGROUND COLORS - Soft & Natural ===== */
+  --bg-primary: #FFFFFF;        /* Pure White */
+  --bg-secondary: #F8F7F4;      /* Soft Off-White */
+  --bg-tertiary: #F1EDE5;       /* Light Beige */
+  --bg-cream: #FAF9F6;          /* Cream */
+  
+  /* ===== TEXT COLORS - Dark & Readable ===== */
+  --text-primary: #1E293B;      /* Dark Slate */
+  --text-secondary: #334155;    /* Medium Slate */
+  --text-muted: #64748B;        /* Muted Gray */
+  --text-light: #94A3B8;        /* Light Gray */
+  
+  /* ===== NATURAL STONE ACCENTS ===== */
+  --stone-gray: #D6D3D1;        /* Stone Gray */
+  --warm-brown: #8B7355;        /* Warm Brown */
+  --marble-white: #F5F5F3;      /* Marble White */
+  --granite-dark: #2D3748;      /* Granite Dark */
+  
+  /* ===== BORDER COLORS ===== */
+  --border-light: #E2E8F0;      /* Very Light Border */
+  --border-medium: #CBD5E1;     /* Light Border */
+  --border-dark: #94A3B8;       /* Medium Border */
+  --border-gold: #C9A14A;       /* Gold Border */
+  
+  /* ===== GRADIENTS - Premium & Elegant ===== */
+  --gradient-navy: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  --gradient-gold: linear-gradient(135deg, #C9A14A 0%, #D4AF5F 100%);
+  --gradient-beige: linear-gradient(135deg, #F8F7F4 0%, #F1EDE5 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.90) 100%);
+  --gradient-premium: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
+  
+  /* ===== SHADOWS - Soft & Elegant ===== */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.10);
+  --shadow-lg: 0 8px 24px rgba(15, 23, 42, 0.12);
+  --shadow-xl: 0 12px 32px rgba(15, 23, 42, 0.15);
+  --shadow-2xl: 0 20px 40px rgba(15, 23, 42, 0.20);
+  
+  /* ===== GOLD SHADOWS ===== */
+  --shadow-gold: 0 4px 16px rgba(201, 161, 74, 0.25);
+  --shadow-gold-lg: 0 8px 24px rgba(201, 161, 74, 0.35);
+  
+  /* ===== HOVER STATES ===== */
+  --hover-navy: #1E293B;        /* Lighter Navy on Hover */
+  --hover-gold: #B8933D;        /* Darker Gold on Hover */
+  --hover-overlay: rgba(201, 161, 74, 0.08);
+  
+  /* ===== OPACITY OVERLAYS ===== */
+  --overlay-light: rgba(255, 255, 255, 0.95);
+  --overlay-dark: rgba(15, 23, 42, 0.85);
+  --overlay-navy: rgba(15, 23, 42, 0.90);
+  --overlay-gold: rgba(201, 161, 74, 0.15);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.bg-navy { background-color: var(--primary-main); }
+.bg-gold { background-color: var(--accent-main); }
+.bg-beige { background-color: var(--bg-tertiary); }
+.bg-white { background-color: var(--bg-primary); }
+
+.text-navy { color: var(--primary-main); }
+.text-gold { color: var(--accent-main); }
+.text-slate { color: var(--text-primary); }
+.text-muted { color: var(--text-muted); }
+
+.border-gold { border-color: var(--border-gold); }
+.border-light { border-color: var(--border-light); }
+
+.shadow-premium { box-shadow: var(--shadow-lg); }
+.shadow-gold { box-shadow: var(--shadow-gold); }
+
+/* ===== PREMIUM EFFECTS ===== */
+.gradient-text-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.premium-border {
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}

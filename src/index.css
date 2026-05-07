@@ -1,0 +1,250 @@
+@import './styles/Colors.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
+/* Urdu Text Styling */
+.urdu-text {
+  font-family: 'Noto Nastaliq Urdu', serif !important;
+  direction: rtl;
+  text-align: center !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.8 !important;
+}
+
+.urdu-text h1,
+.urdu-text h2,
+.urdu-text h3,
+.urdu-text h4,
+.urdu-text h5,
+.urdu-text h6 {
+  font-family: 'Noto Nastaliq Urdu', serif !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.6 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+}
+
+.urdu-text p,
+.urdu-text span,
+.urdu-text a,
+.urdu-text li,
+.urdu-text button {
+  font-family: 'Noto Nastaliq Urdu', serif !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.8 !important;
+  text-align: center !important;
+}
+
+/* Urdu specific adjustments */
+.urdu-text .hero-title {
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+}
+
+.urdu-text .hero-subtitle {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.urdu-text .hero-description {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+.urdu-text .hero-btn-primary,
+.urdu-text .hero-btn-secondary {
+  font-size: 13px !important;
+  padding: 12px 24px !important;
+}
+
+.urdu-text .about-title,
+.urdu-text .services-title,
+.urdu-text .projects-title,
+.urdu-text .contact-title,
+.urdu-text .social-title {
+  font-size: 1.8rem !important;
+  line-height: 1.4 !important;
+}
+
+.urdu-text .about-description,
+.urdu-text .services-description,
+.urdu-text .projects-description,
+.urdu-text .contact-description {
+  font-size: 0.95rem !important;
+  line-height: 1.8 !important;
+}
+
+.urdu-text .service-title {
+  font-size: 0.9rem !important;
+  line-height: 1.4 !important;
+}
+
+.urdu-text .service-description,
+.urdu-text .service-feature {
+  font-size: 0.8rem !important;
+  line-height: 1.6 !important;
+}
+
+.urdu-text .footer-company h3 {
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+}
+
+.urdu-text .footer-company p {
+  font-size: 9px !important;
+  line-height: 1.5 !important;
+}
+
+.urdu-text .footer-section h4 {
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+}
+
+.urdu-text .footer-link,
+.urdu-text .footer-service-item,
+.urdu-text .footer-contact li {
+  font-size: 9px !important;
+  line-height: 1.4 !important;
+}
+
+/* Mobile Urdu adjustments */
+@media (max-width: 639px) {
+  .urdu-text .hero-title {
+    font-size: 18px !important;
+  }
+  
+  .urdu-text .hero-subtitle {
+    font-size: 13px !important;
+  }
+  
+  .urdu-text .hero-description {
+    font-size: 11px !important;
+  }
+  
+  .urdu-text .about-title,
+  .urdu-text .services-title,
+  .urdu-text .projects-title,
+  .urdu-text .contact-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .urdu-text .footer-company h3 {
+    font-size: 11px !important;
+  }
+  
+  .urdu-text .footer-company p {
+    font-size: 8px !important;
+  }
+  
+  .urdu-text .footer-section h4 {
+    font-size: 10px !important;
+  }
+  
+  .urdu-text .footer-link,
+  .urdu-text .footer-service-item,
+  .urdu-text .footer-contact li {
+    font-size: 8px !important;
+  }
+}
+
+/* Tablet Urdu adjustments */
+@media (min-width: 640px) {
+  .urdu-text .hero-title {
+    font-size: 32px !important;
+  }
+  
+  .urdu-text .hero-subtitle {
+    font-size: 17px !important;
+  }
+  
+  .urdu-text .hero-description {
+    font-size: 14px !important;
+  }
+}
+
+/* Desktop Urdu adjustments */
+@media (min-width: 1024px) {
+  .urdu-text .hero-title {
+    font-size: 48px !important;
+  }
+  
+  .urdu-text .hero-subtitle {
+    font-size: 20px !important;
+  }
+  
+  .urdu-text .hero-description {
+    font-size: 16px !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-padding-top: 80px; /* Offset for fixed navbar */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Prevent horizontal scroll */
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, textarea, select {
+  transition: all 0.3s ease;
+}
+
+/* Smooth section transitions */
+section {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.text-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background 0.3s ease;
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button, a {
+    touch-action: manipulation;
+  }
+}
+
