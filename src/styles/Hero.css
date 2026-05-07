@@ -211,15 +211,16 @@
 
 .hero-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 12px;
+  flex-wrap: nowrap;
 }
 
 .hero-btn-primary {
-  padding: 14px 32px;
+  padding: 11px 24px;
   background: linear-gradient(135deg, #C9A14A 0%, #D4AF5F 50%, #E5C474 100%);
   color: #0F172A;
   font-weight: 600;
@@ -228,15 +229,16 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 16px rgba(201, 161, 74, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
   display: inline-block;
-  width: 100%;
-  max-width: 250px;
+  width: auto;
+  max-width: 180px;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
   overflow: hidden;
   will-change: transform, box-shadow;
+  white-space: nowrap;
 }
 
 .hero-btn-primary::before {
@@ -261,7 +263,7 @@
 }
 
 .hero-btn-secondary {
-  padding: 14px 32px;
+  padding: 11px 24px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -272,14 +274,15 @@
   text-decoration: none;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
-  width: 100%;
-  max-width: 250px;
+  width: auto;
+  max-width: 180px;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   will-change: transform, box-shadow;
+  white-space: nowrap;
 }
 
 .hero-btn-secondary:hover {
@@ -342,6 +345,13 @@
   .hero-description {
     font-size: 15px;
   }
+  
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    padding: 12px 28px;
+    font-size: 13px;
+    max-width: 200px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -365,13 +375,14 @@
   }
   
   .hero-buttons {
-    flex-direction: row;
-    gap: 16px;
+    gap: 14px;
   }
   
   .hero-btn-primary,
   .hero-btn-secondary {
-    width: auto;
+    padding: 13px 32px;
+    font-size: 14px;
+    max-width: 220px;
   }
   
   .scroll-indicator {
@@ -410,6 +421,13 @@
     font-size: 18px;
     margin-bottom: 40px;
   }
+  
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    padding: 14px 36px;
+    font-size: 14px;
+    max-width: 240px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -419,5 +437,10 @@
   
   .hero-subtitle {
     font-size: 28px;
+  }
+  
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    max-width: 260px;
   }
 }
